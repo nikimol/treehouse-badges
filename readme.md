@@ -28,6 +28,3 @@ var showBadges = 16;
 Only subjects with a minimum points total of 1000 will show by default. You can change this to 0 to show all progress bars, or to whatever value you want, e.g.
 ```
 var minPointsShow = 250;
-```
-## Still to do
-- [ ] Sort out XMLHTTPRequest so if data (or an object) is not returned, show the alert div
