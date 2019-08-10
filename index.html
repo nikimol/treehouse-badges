@@ -1,0 +1,79 @@
+<!--
+ * index.html v1.0
+ *
+ * Author: Niki Molnar
+ * github.com/nikimol/reportcard
+ *
+ * The index.html file for ReportCard
+ * ----------------------------------
+ *
+ * This report card shows the badges obtained from courses on the teamtreehouse.com website.
+ * It uses HTML, CSS, Javascript and jQuery.
+ * Include your username in js/config.js and load this index.html page.
+ *
+ * * * * * * * * * * * * * * * * * * * * * * 
+-->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Team Treehouse Badges and Points</title>
+        <meta name="description" content="This report card shows the badges obtained from courses on the teamtreehouse.com website">
+        <meta name="viewport" content="width=device-width">
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <!-- App CSS -->
+        <link rel="stylesheet" href="css/reportcard.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+            <header>
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
+                    <a class="navbar-brand" href="#">Team Treehouse Badges</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+            </header>
+			
+			<div class="alert alert-warning mx-4" id="alertWait">Getting data...</div>
+
+            <div class="alert alert-danger mx-4" id="zeroReturn" style="display:none;"></div>
+
+            <section id="progressBars" style="display:none;">
+        
+                <h3>Total Points Achieved: <span id="totalPoints"></span></h3>
+
+                <div id="bars"></div>
+
+            </section>
+
+            <section id="badges" style="display:none;">
+        
+                <h2>Treehouse Badges</h2>
+
+                <div class="row" id="badgesDetail"></div>
+
+            </section>
+
+            
+        </div>
+
+        <!-- Include jQuery and Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="node_modules/axios/dist/axios.min.js"></script>
+        
+		<!-- Include JS files - deferred -->
+        <script defer src="js/config.js"></script>
+        <script defer src="js/getdata.js"></script>
+        <script defer src="js/reportcard.js"></script>
+    </body>
+</html>
